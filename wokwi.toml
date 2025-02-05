@@ -1,4 +1,0 @@
-[wokwi]
-version = 1
-firmware = 'build/atv2_temporizador_oneshot.hex'
-elf = 'build/atv2_temporizador_oneshot.elf'
