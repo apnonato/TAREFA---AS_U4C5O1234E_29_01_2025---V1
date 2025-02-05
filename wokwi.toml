@@ -1,4 +1,4 @@
 [wokwi]
 version = 1
-firmware = 'build/atv1_semafaro.hex'
-elf = 'build/atv1_semafaro.elf'
+firmware = 'build/atv2_temporizador_oneshot.hex'
+elf = 'build/atv2_temporizador_oneshot.elf'

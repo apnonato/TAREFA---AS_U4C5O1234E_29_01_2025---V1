@@ -28,35 +28,35 @@ set(PICO_BOARD pico_w CACHE STRING "Board type")
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-project(atv1_semafaro C CXX ASM)
+project(atv2_temporizador_oneshot C CXX ASM)
 
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(atv1_semafaro atv1_semafaro.c )
+add_executable(atv2_temporizador_oneshot atv2_temporizador_oneshot.c )
 
-pico_set_program_name(atv1_semafaro "atv1_semafaro")
-pico_set_program_version(atv1_semafaro "0.1")
+pico_set_program_name(atv2_temporizador_oneshot "atv2_temporizador_oneshot")
+pico_set_program_version(atv2_temporizador_oneshot "0.1")
 
 # Modify the below lines to enable/disable output over UART/USB
-pico_enable_stdio_uart(atv1_semafaro 1)
-pico_enable_stdio_usb(atv1_semafaro 1)
+pico_enable_stdio_uart(atv2_temporizador_oneshot 1)
+pico_enable_stdio_usb(atv2_temporizador_oneshot 1)
 
 # Add the standard library to the build
-target_link_libraries(atv1_semafaro
+target_link_libraries(atv2_temporizador_oneshot
         pico_stdlib)
 
 # Add the standard include files to the build
-target_include_directories(atv1_semafaro PRIVATE
+target_include_directories(atv2_temporizador_oneshot PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}
 )
 
 # Add any user requested libraries
-target_link_libraries(atv1_semafaro 
+target_link_libraries(atv2_temporizador_oneshot 
         
         )
 
-pico_add_extra_outputs(atv1_semafaro)
+pico_add_extra_outputs(atv2_temporizador_oneshot)
 
